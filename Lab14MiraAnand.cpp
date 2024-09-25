@@ -43,6 +43,7 @@ int main()
     Color color1;
     // using setters to populate the object with data
     // RGB color values are within the range of 0-255, so data has to be within that range
+    // 255, 0, 0 are the RGB values that create the color red
     color1.setRed(255);
     color1.setGreen(0);
     color1.setBlue(0);
@@ -52,6 +53,7 @@ int main()
     // creation of 2nd color object
     Color color2;
     // using setters to populate the object with data
+    // 0, 255, 0 are the RGB values that create the color green
     color2.setRed(0);
     color2.setGreen(255);
     color2.setBlue(0);
@@ -61,6 +63,7 @@ int main()
     // creation of 3rd color object
     Color color3;
     // using setters to populate the object with data
+    // 0, 0, 255 are the RGB values that create the color blue
     color3.setRed(0);
     color3.setGreen(0);
     color3.setBlue(255);
@@ -70,11 +73,22 @@ int main()
     // creation of 4th color object
     Color color4;
     // using setters to populate the object with data
+    // 255, 255, 0 are the RGB values that create the color yellow
     color4.setRed(255);
     color4.setGreen(255);
     color4.setBlue(0);
     // outputting color values to the console using the object's print() method
     color4.print();
+
+    // creation of 5th color object
+    Color color5;
+    // using setters to populate the object with data
+    // 255, 192, 203 are the RGB values that create the color pink
+    color5.setRed(255);
+    color5.setGreen(192);
+    color5.setBlue(203);
+    // outputting color values to the console using the object's print() method
+    color5.print();
 
     return 0;
 }
