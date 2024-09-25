@@ -17,8 +17,20 @@ class Color
     // using inline functions for setters and getters, since functions are 1 line
     public:
         // creating all setters together, to keep it organized
-        void setRed(int r)  { red = r; }
-        void setGreen(int g) { green = g; }
+        void setRed(int r)      { red = r; }
+        void setGreen(int g)    { green = g; }
+        void setBlue(int b)     { blue = b; }
+        // creating all getters together, to keep it organized
+        // adding a trailing const to each, since getters do not change an object's data
+        int getRed() const      { return red; }
+        int getGreen() const    { return green; }
+        int getBlue() const     { return blue; }
+
+        // creating a member print() method to print the object's data
+        void print()
+        {
+            cout << "Color - RGB color values:" << endl;
+        }
 };
 
 int main()
