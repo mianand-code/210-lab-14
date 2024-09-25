@@ -30,10 +30,18 @@ class Color
         void print()
         {
             cout << "Color - RGB color values:" << endl;
+            cout << "Red value: " << red << ", ";
+            cout << "Green value: " << green << ", ";
+            cout << "Blue value: " << blue << endl;
         }
 };
 
 int main()
 {
+    // creation of 1st color object
+    Color color1;
+    // using setters to populate the object with data
+    color1.setRed(255);
 
+    return 0;
 }
