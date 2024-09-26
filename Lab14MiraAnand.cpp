@@ -42,6 +42,10 @@ class Color
         int getBlue() const     { return blue; }
 
         // creating a member print() method to print the object's data
+        // void print() function header
+        // DESCRIPTION: this function neatly outputs the RGB hue values for each Color object
+        // ARGUMENTS: no arguments/parameters
+        // RETURNS: nothing, void function 
         void print()
         {
             cout << "Color - RGB hue values:" << endl;
