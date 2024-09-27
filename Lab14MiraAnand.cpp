@@ -4,6 +4,7 @@
 
 #include <cstdlib> // needed to generate a random number
 #include <ctime> // needed to generate a random number
+#include <iomanip> // needed to use setw()
 #include <iostream>
 using namespace std;
 
@@ -11,6 +12,8 @@ using namespace std;
 // creation of this variable will help to generate a random number for each RGB hue value in main()
 // initializing the variable with the value 256 because rand() % 256 = 0-255, which is the range of possible values for each hue according to the RGB color model
 const int MAX_HUE_VALUE = 256;
+// declaration and initialization of a const int variable to use with setw() to neatly format output
+const int SET_W_NUM = 3;
 
 // creation of Color class
 class Color
@@ -26,7 +29,7 @@ class Color
         // creating all setters together, to keep it organized
         // void setRed(int r), void setGreen(int g), void setBlue(int b) function header
         // DESCRIPTION: these functions will "set" the RGB hue values for each Color object
-        // ARGUMENTS: int r, int g, & int b. Represents the hue value for each color
+        // ARGUMENTS: int r, int g, & int b. Represents the 3 separate hue values for each color
         // RETURNS: nothing, void functions
         void setRed(int r)      { red = r; }
         void setGreen(int g)    { green = g; }
@@ -44,14 +47,15 @@ class Color
         // creating a member print() method to print the object's data
         // void print() function header
         // DESCRIPTION: this function neatly outputs the RGB hue values for each Color object
+        // SET_W_NUM ensures all hue values are neatly aligned
         // ARGUMENTS: no arguments/parameters
         // RETURNS: nothing, void function 
         void print()
         {
             cout << "Color - RGB hue values:" << endl;
-            cout << "Red value: " << red << ", ";
-            cout << "Green value: " << green << ", ";
-            cout << "Blue value: " << blue << endl;
+            cout << "Red value: " << setw(SET_W_NUM) << red << ", ";
+            cout << "Green value: " << setw(SET_W_NUM) << green << ", ";
+            cout << "Blue value: " << setw(SET_W_NUM) << blue << endl;
             cout << endl;
         }
 };
@@ -69,7 +73,7 @@ int main()
     color1.setRed(rand() % MAX_HUE_VALUE);
     color1.setGreen(rand() % MAX_HUE_VALUE);
     color1.setBlue(rand() % MAX_HUE_VALUE);
-    // outputting color values to the console using the object's print() method
+    // outputting hue values to the console using the object's print() method
     color1.print();
 
     // creation of 2nd Color object
@@ -79,7 +83,7 @@ int main()
     color2.setRed(rand() % MAX_HUE_VALUE);
     color2.setGreen(rand() % MAX_HUE_VALUE);
     color2.setBlue(rand() % MAX_HUE_VALUE);
-    // outputting color values to the console using the object's print() method
+    // outputting hue values to the console using the object's print() method
     color2.print();
 
     // creation of 3rd Color object
@@ -89,7 +93,7 @@ int main()
     color3.setRed(rand() % MAX_HUE_VALUE);
     color3.setGreen(rand() % MAX_HUE_VALUE);
     color3.setBlue(rand() % MAX_HUE_VALUE);
-    // outputting color values to the console using the object's print() method
+    // outputting hue values to the console using the object's print() method
     color3.print();
 
     // creation of 4th Color object
@@ -99,7 +103,7 @@ int main()
     color4.setRed(rand() % MAX_HUE_VALUE);
     color4.setGreen(rand() % MAX_HUE_VALUE);
     color4.setBlue(rand() % MAX_HUE_VALUE);
-    // outputting color values to the console using the object's print() method
+    // outputting hue values to the console using the object's print() method
     color4.print();
 
     // creation of 5th Color object
@@ -109,7 +113,7 @@ int main()
     color5.setRed(rand() % MAX_HUE_VALUE);
     color5.setGreen(rand() % MAX_HUE_VALUE);
     color5.setBlue(rand() % MAX_HUE_VALUE);
-    // outputting color values to the console using the object's print() method
+    // outputting hue values to the console using the object's print() method
     color5.print();
 
     return 0;
